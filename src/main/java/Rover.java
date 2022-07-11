@@ -1,17 +1,17 @@
+import coordinates.Coordinates;
+
+import java.util.Objects;
+
 public class Rover {
-    private final int x;
-    private final int y;
 
-    public Rover(int x, int y) {
-        this.x = x;
-        this.y = y;
+    private final Coordinates coordinates;
+
+    public Rover(Coordinates initialCoordinates) {
+
+        coordinates = initialCoordinates;
     }
 
-    public int currentYLocation() {
-        return this.y;
-    }
-
-    public int currentXLocation() {
-        return this.x;
+    public Coordinates currentLocation() {
+        return this.coordinates;
     }
 }
