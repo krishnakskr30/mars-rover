@@ -11,7 +11,7 @@ public class RoverTest {
         Rover rover = new Rover(initialCoordinates, Direction.N);
         Coordinates expectedCoordinates = new Coordinates(0, 0);
 
-        Coordinates actualCoordinates = rover.currentLocation();
+        Coordinates actualCoordinates = rover.currentCoordinates();
 
         assertEquals(actualCoordinates, expectedCoordinates);
     }

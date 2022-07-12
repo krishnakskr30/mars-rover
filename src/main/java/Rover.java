@@ -11,7 +11,7 @@ public class Rover {
         direction = initialDirection;
     }
 
-    public Coordinates currentLocation() {
+    public Coordinates currentCoordinates() {
         return this.coordinates;
     }
 
