@@ -7,7 +7,7 @@ public class RoverTest {
     @Test
     void shouldProvideCurrentCoordinates() {
         Coordinates initialCoordinates = new Coordinates(0, 0);
-        Rover rover = new Rover(initialCoordinates, 'N');
+        Rover rover = new Rover(initialCoordinates, Direction.N);
         Coordinates expectedCoordinates = new Coordinates(0, 0);
 
         Coordinates actualCoordinates = rover.currentLocation();
@@ -18,10 +18,10 @@ public class RoverTest {
     @Test
     void shouldProvideCurrentDirection() {
         Coordinates initialCoordinates = new Coordinates(0, 0);
-        char initialDirection = 'N';
+        Direction initialDirection = Direction.N;
         Rover rover = new Rover(initialCoordinates, initialDirection);
 
-        char actualDirection = rover.currentDirection();
+        Direction actualDirection = rover.currentDirection();
 
         assertEquals(initialDirection, actualDirection);
     }

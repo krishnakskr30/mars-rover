@@ -3,9 +3,9 @@ import coordinates.Coordinates;
 public class Rover {
 
     private final Coordinates coordinates;
-    char direction;
+    Direction direction;
 
-    public Rover(Coordinates initialCoordinates, char initialDirection) {
+    public Rover(Coordinates initialCoordinates, Direction initialDirection) {
 
         coordinates = initialCoordinates;
         direction = initialDirection;
@@ -15,7 +15,7 @@ public class Rover {
         return this.coordinates;
     }
 
-    public char currentDirection() {
+    public Direction currentDirection() {
         return this.direction;
     }
 }
