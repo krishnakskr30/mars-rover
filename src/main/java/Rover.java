@@ -20,6 +20,6 @@ public class Rover {
     }
 
     public void turnRight() {
-        this.direction = Direction.E;
+        this.direction = this.direction.right();
     }
 }
