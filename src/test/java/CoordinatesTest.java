@@ -9,4 +9,9 @@ public class CoordinatesTest {
     void shouldNotCreateCoordinatesWhenNegativeXCoordinateIsGiven() {
         assertThrows(NegativeCoordinateException.class, () -> new Coordinates(-1, 0));
     }
+
+    @Test
+    void shouldNotCreateCoordinatesWhenNegativeYValueIsGiven() {
+        assertThrows(NegativeCoordinateException.class, () -> new Coordinates(0, -1));
+    }
 }

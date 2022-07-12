@@ -7,7 +7,7 @@ public class Coordinates {
     private final int yCoordinate;
 
     public Coordinates(int xCoordinate, int yCoordinate) throws NegativeCoordinateException {
-        if(xCoordinate<0) throw new NegativeCoordinateException();
+        if (xCoordinate < 0 || yCoordinate < 0) throw new NegativeCoordinateException();
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
     }
