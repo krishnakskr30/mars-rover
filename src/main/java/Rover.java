@@ -18,4 +18,8 @@ public class Rover {
     public Direction currentDirection() {
         return this.direction;
     }
+
+    public void turnRight() {
+        this.direction = Direction.E;
+    }
 }
