@@ -24,6 +24,6 @@ public class Rover {
     }
 
     public void turnLeft() {
-        this.direction = Direction.W;
+        this.direction = this.direction.left();
     }
 }

@@ -64,4 +64,17 @@ public class RoverTest {
 
         assertEquals(actualDirection, expectedDirection);
     }
+
+    @Test
+    void shouldTurnLeftFromWest() {
+        Coordinates initialCoordinates = new Coordinates(0, 0);
+        Direction initialDirection = Direction.W;
+        Direction expectedDirection = Direction.S;
+        Rover rover = new Rover(initialCoordinates, initialDirection);
+
+        rover.turnLeft();
+        Direction actualDirection = rover.currentDirection();
+
+        assertEquals(actualDirection, expectedDirection);
+    }
 }
