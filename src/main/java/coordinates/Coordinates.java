@@ -1,11 +1,13 @@
 package coordinates;
 
+import exceptions.NegativeCoordinateException;
+
 public class Coordinates {
     private final int xCoordinate;
     private final int yCoordinate;
 
-    public Coordinates(int xCoordinate, int yCoordinate) {
-
+    public Coordinates(int xCoordinate, int yCoordinate) throws NegativeCoordinateException {
+        if(xCoordinate<0) throw new NegativeCoordinateException();
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
     }

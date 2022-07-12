@@ -1,11 +1,12 @@
 import coordinates.Coordinates;
+import exceptions.NegativeCoordinateException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RoverTest {
     @Test
-    void shouldProvideCurrentCoordinates() {
+    void shouldProvideCurrentCoordinates() throws NegativeCoordinateException {
         Coordinates initialCoordinates = new Coordinates(0, 0);
         Rover rover = new Rover(initialCoordinates, Direction.N);
         Coordinates expectedCoordinates = new Coordinates(0, 0);
@@ -16,7 +17,7 @@ public class RoverTest {
     }
 
     @Test
-    void shouldProvideCurrentDirection() {
+    void shouldProvideCurrentDirection() throws NegativeCoordinateException {
         Coordinates initialCoordinates = new Coordinates(0, 0);
         Direction initialDirection = Direction.N;
         Rover rover = new Rover(initialCoordinates, initialDirection);
@@ -27,7 +28,7 @@ public class RoverTest {
     }
 
     @Test
-    void shouldTurnRight() {
+    void shouldTurnRight() throws NegativeCoordinateException {
         Coordinates initialCoordinates = new Coordinates(0, 0);
         Direction initialDirection = Direction.N;
         Direction expectedDirection = Direction.E;
@@ -40,7 +41,7 @@ public class RoverTest {
     }
 
     @Test
-    void shouldTurnRightFromEast() {
+    void shouldTurnRightFromEast() throws NegativeCoordinateException {
         Coordinates initialCoordinates = new Coordinates(0, 0);
         Direction initialDirection = Direction.E;
         Direction expectedDirection = Direction.S;
@@ -53,7 +54,7 @@ public class RoverTest {
     }
 
     @Test
-    void shouldTurnLeft() {
+    void shouldTurnLeft() throws NegativeCoordinateException {
         Coordinates initialCoordinates = new Coordinates(0, 0);
         Direction initialDirection = Direction.N;
         Direction expectedDirection = Direction.W;
@@ -66,7 +67,7 @@ public class RoverTest {
     }
 
     @Test
-    void shouldTurnLeftFromWest() {
+    void shouldTurnLeftFromWest() throws NegativeCoordinateException {
         Coordinates initialCoordinates = new Coordinates(0, 0);
         Direction initialDirection = Direction.W;
         Direction expectedDirection = Direction.S;
